@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+h1 {
+  margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important; 
+  font-size: 50px;
+  text-align: center;
+  background-color: bisque;
+}
+/* Responsive styles for small devices */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 30px;
+    background-color: bisque; 
+  }
+}
+
+
+    h2 {
+  margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important; 
+  margin-top: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-color: bisque;
+}
+h3{
+    margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important;
+  margin-top: 30px;
+  font-size: 30px;
+  text-align: center;
+  background-color: bisque;  
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+text-align: justify;
+}
+h5{
+    margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important; 
+  margin-top: 30px;
+  font-size: 30px;
+  background-color:whitesmoke;  
+}
+ 
+.card-container {
+    display: flex;
+    gap: 2px; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    padding: 2px;
+    margin: 2px;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover;
+    border-radius: 2px;
+}
+        body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer-gray {
+  background-color: #EFEFEF;
+  width: 100%;
+}
+
+.footer-custom {
+  color: #888;
+  font: normal normal 12px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  max-width: 1008px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-hdr {
+  color: #000;
+  font: 22px/1.4 'BebasNeueRegular', BebasNeue, 'Bebas Neue', Arial, sans-serif;
+  margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  /*width: 150px;*/
+}
+
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+
+.footer-custom .footer-legal a {
+  display: inline;
+}
+
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+
+#ftrEmailForm {
+  height: 44px;
+}
+
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 BebasFamily, BebasNeueRegular, "Bebas Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFF;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -o-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: linear-gradient(to bottom, white 0, #e1e1e1 100%);
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+
+.footer-payment {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+.ftr-bbb span,
+.ftr-stella span {
+  background-image: url("http://cache1.artprintimages.com/images/jump_pages/rebrand2/images/subnav2.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.ftr-bbb span {
+  background-position: -339px -8px;
+  width: 96px;
+}
+
+.ftr-stella span {
+  background-position: -339px -107px;
+  width: 57px;
+}
+p {
+  text-align: justify;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 19px;
+  word-wrap: break-word;
+}
+
+ol{
+  font-size: 19px;
+}
+h4{
+  font-size: 19px; 
+}
+.image-container {
+      text-align: center;
+    }
+    img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+<body>
+    <h1>THIRUVANANTHAPURAM</h1> 
+    <div class="image-container">
+      <img src="image/101.jpg" alt="" width="600" height="400">
+    </div>
+
+    <p>Thiruvananthapuram, the jewel in the emerald necklace that Kerala is for the Indian sub-continent, must surely have been a “must see” destination for ages, long before National Geographic Traveller classified it as one. Surely long before Sage Parasurama, according to local legend, threw his divine battle axe from Kanyakumari to Gokarnam to west Kerala, God’s own land, from the Varuna, the sea god; before the times of Mahabali, the democratic and just ruler of this wonderful land who was sent down to the netherworld through deceit.</p>
+    <p>It doesn't take any flights of fancy to imagine that this land fired the imaginations of intrepid travellers and explorers like Columbus, Vasco da Gama, Marco Polo, Fa Hien, and quite possibly, countless others from the pages of history, recorded or not. The rich tapestry of Thiruvananthapuram's history, steeped in mythology and ancient tales, adds a layer of enchantment to this coastal city. As the capital of Kerala, it stands as a testament to the cultural and historical legacy of the region, drawing visitors into its timeless allure.</p>
+    <h4>Places To Visit in Trivandrum</h4>
+    <ol>
+      <li>Kuthiramalika (Puthenmalika) Palace Museum</li>
+      <li>Padmanabhapuram Palace</li>
+      <li>Napier Museum</li>
+      <li>The Kanakakunnu Palace</li>
+      <li>Priyadarshini Space Planetarium</li>
+      <li>Vizhinjam RockCut Cave</li>
+      <li>Thiruvananthapuram Zoo</li>
+      <li>Attukal Bhagavathy Temple</li>
+      <li>Vizhinjam Lighthouse</li>
+      <li>Padmanabhaswamy Temple</li>
+      <li>Kovalam Beach</li>
+      <li>Shanghumukham Beach</li>
+      <li>Varkala Beach</li>
+      <li>Neyyar Dam and Wildlife Sanctuary</li>
+      <li>Veli Tourist Village</li>
+      <li>Ponmudi</li>
+    </ol>
+    
+<h4>Things To Do In Trivandrum</h4>
+<ol>
+    <li>Skydiving</li>
+    <li>Boating at Neyyar Dam</li>
+    <li>Trek to Agasthyakoodam</li>
+    <li>Happy Land Water Theme Park</li>
+    <li>Water sports at Beaches</li>
+    <li>Mystical Theme Park – Magic Planet</li>
+    <li>Bird-watching at Zoological Park</li>
+    <li>Explore the History of Kerala at Museums</li>
+    <li>Astronomical Observatory</li>
+    <li>Visit Famous Temples</li>
+    <li>A day in Neyyar Wildlife Sanctuary</li>
+    <li>Shopping in Thiruvananthapuram</li>
+  </ol>
+<h2>BEST TIME TO VISIT THIRUVANANTHAPURAM</h2>
+<p><strong>1. Winters in Thiruvananthapuram </strong>The winter season starts with November and usually goes up to February. The temperature amid this season runs between 18°C to 30°C. The climate stays cool as of now which makes it the ideal season for touring and different exercises in the place. Amid winters, you can appreciate touring at The Kanakakkunnu Palace, Agastya Mala Peak, The Napier Museum, Sree Chithra Art Gallery and The Chalai Bazaar. If you are planning a trip to Trivandrum during this time then make sure your bookings are done prior as this is considered the best time to visit by many and prices peak.</p>
+<p><strong>2. Summers in Thiruvananthapuram </strong>The summer season in Thiruvananthapuram begins from March and usually lasts till May. The climate amid this time stays hot and damp. This time of the year is known as an off-beat period as temperature raises up to 37°C. But if you are one that chooses vacation on days that there is less rush then this is the perfect time.</p>
+<p><strong>3. Monsoon in Thiruvananthapuram </strong>Thiruvananthapuram encounters rainstorm from the long stretch of June till September. The city gets overwhelming precipitation amid the rainstorm season. The climate keeps quiet and cool which makes it a decent time for touring. You can visit attractions, for example, Swamy Temple, Science and Technology Museum and The Zoological Park. During this time this evergreen city looks all the more beautiful and in every corner, you will witness shades of green.</p>
+ <h2>MAIN TOURIST ATTRACTIONS</h2>
+    <h5>1.SREE PADMANABHASWAMY TEMPLE</h5>
+  <p>The Sree Padmanabhaswamy Temple in Thiruvananthapuram is renowned as one of the wealthiest shrines globally, its opulent treasures and intricate Dravidian architecture attracting visitors. The temple, dedicated to Lord Padmanabha, stands as a testament to the rich cultural heritage of Kerala, with its sacred sanctum and the intriguing mystery surrounding the hidden vaults adding to its allure.</p>
+  <p><strong>Entry time: Tuesday to Sunday - 3:00 am – 12:00 pm,5.00 to 8:30 PM.</strong>
+   <!-- row1 -->
+   <div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/sr1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/sr2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/sr3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/sr4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+  <h5>2.KOVALAM BEACH</h5>
+  <p>A coastal paradise, Kovalam boasts golden sands and crystal-clear waters. This internationally renowned beach destination offers a perfect blend of relaxation and water activities, making it a haven for sun-seekers and adventure enthusiasts alike.</p>
+  <p><strong>Entry time: Momday to Sunday - 12:00 am – 11:59 pm</strong>
+  <!-- row2 -->
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/kov1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/kov2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/kov3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/kov4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+  <h5>3.NAPIER MUSEUM AND ZOO</h5>
+  <p>Immerse yourself in the rich cultural heritage of Trivandrum at the Napier Museum, showcasing a remarkable collection of artifacts. Adjacent to the museum, the Trivandrum Zoo adds a touch of wildlife charm, featuring a diverse range of species in lush surroundings.</p>
+  <p><strong>Entry time: Tuesday to Sunday - 10:00 am – 5:00 pm</strong>
+  <!-- row3 -->
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/nm1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/nm3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/nm4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/nm5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+  <h5>4.KANAKAKUNNU PALACE</h5>
+  <p>A symbol of royal opulence, Kanakakunnu Palace is surrounded by manicured gardens and offers a glimpse into the bygone era of the Travancore dynasty. The palace hosts cultural events and exhibitions, providing a cultural treat for visitors.</p>
+  <p><strong>Entry time: Tuesday to Sunday - 10:00 am – 5:00 pm</strong>
+  <!-- row4 -->
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/ka1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ka2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ka3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ka4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+  <h5>5.POOVAR ISLAND</h5>
+  <p>A tranquil escape, Poovar Island is where the backwaters meet the Arabian Sea. Boating through the serene estuaries surrounded by coconut palms and golden sand, visitors can experience the pristine beauty of Kerala's coastal ecosystem.</p>
+  <p><strong>Entry time: Monday to Sunday - 12:00 am – 11:59 pm</strong>
+  <!-- row5 -->
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/po1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/po2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/po3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/po4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+<p>Step into the heart of cultural richness and natural splendor as you explore Thiruvananthapuram. Our detailed guide ensures you have all the essential information to navigate this vibrant city seamlessly. Uncover the historical treasures, delve into the spiritual essence of the renowned temples, and meander through the bustling markets where tradition meets modernity. Thiruvananthapuram, with its blend of heritage and contemporary allure, invites you to embark on a journey of discovery. Let our guide be your companion as you traverse the city's diverse offerings, creating memories that will linger in your heart long after your Thiruvananthapuram adventure concludes.</p>
+  <section>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252543.56612438837!2d76.75934800303564!3d8.500037896180112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbb805bbcd47%3A0x15439fab5c5c81cb!2sThiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1704814796302!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+  <section>
+    <footer>
+        <div class="footer-gray">
+          <div class="footer-custom">
+            <div class="footer-lists">
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">For More Info</h6>
+                <ul class="ftr-links-sub">
+                  <li>89653490</li>
+                </ul>
+                <h6 class="ftr-hdr">KERALA</h6>
+                <ul class="ftr-links-sub">
+                  <li><a href="http://www.art.fr" rel="nofollow">keralatourism</a></li>
+                  <li><a href="https://www.art.co.uk" rel="nofollow">Nature Love</a></li>
+                </ul>
+              </div>
+              <!--/.footer-list-wrap-->
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">Travel Hub</h6>
+                <ul class="ftr-links-sub">
+                  <li><a href="/help/talktous.html" rel="nofollow">kerala at a Glance</a></li>
+                  <li><a href="/help/placingorders.html" rel="nofollow">Accomodation</a></li>
+                  <li><a href="/help/shipping.html" rel="nofollow">tips &amp; places</a></li>
+                  <li><a href="/help/shippingreturns.html" rel="nofollow">Best places</a></li>
+                  <li><a href="/help/international-shipping.html" rel="nofollow">videos</a></li>
+                  <li><a href="/~/egift-cards/" rel="nofollow">photo</a></li>
+                  <li><a href="/help/faq.html" rel="nofollow">festivals</a></li>
+                </ul>
+              </div>
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">Nature</h6>
+                <ul class="ftr-links-sub">
+                  <li><a href="/asp/aboutus/default-asp/_/posters.htm" rel="nofollow">Hill</a></li>
+                  <li><a href="http://corporate.art.com/careers" rel="nofollow">Back waters</a></li>
+                  <li><a href="/asp/landing/artistrising" rel="nofollow">Artist Rising</a></li>
+                  <li><a href="/~/art-for-business" rel="nofollow">Beaches</a></li>
+                  <li><a href="http://affiliates.art.com/index.aspx" rel="nofollow">Events</a></li>
+                  <li><a href="/catalog" rel="nofollow"><strong>wildlife</strong></a></li>
+                  <li><a href="http://blog.art.com" rel="nofollow">waterfalls/a></li>
+                </ul>
+              </div>
+              <!--/.footer-list-wrap-->
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">specialities</h6>
+                <ul class="ftr-links-sub">
+                  <art:content rule="!loggedin">
+                    <li class="ftr-Login"><span class="link login-trigger">Ayurveda</span></li>
+                    <li><span class="link" onclick="link('/asp/secure/your_account/track_orders-asp/_/posters.htm')">Track My Order</span></li>
+                  </art:content>
+                  <art:content rule="loggedin">
+                    <li class="ftr-Login"><span class="link ftr-access-my-account">Mansoon</span></li>
+                    <li><span class="link" onclick="window.location.href = getProfileKey() + '?pagetype=oh';">houseboats</span></li>
+                  </art:content>
+                </ul>
+              </div>
+              <!--/.footer-list-wrap-->
+            </div>
+            <!--/.footer-lists-->
+            <div class="footer-email">
+              <h6 class="ftr-hdr">Subscribe our news letter</h6>
+              <div id="ftr-email" class="ftr-email-form">
+                <form id="ftrEmailForm" method="post" action="http://em.art.com/pub/rf">
+                  <div class="error">Please enter a valid email address</div>
+                  <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address" />
+                  <!--
+                      -->
+                  <input type="submit" class="button" value="SUBMIT" />
+                  <input type="hidden" name="country_iso2" value="">
+                  <input type="hidden" name="language_iso2" value="en">
+                  <input type="hidden" name="site_domain" value="art.com">
+                  <input type="hidden" name="email_acq_source" value="01-000001">
+                  <input type="hidden" name="email_acq_date" value="" id="ftr-email-date">
+                  <input type="hidden" name="brand_id" value="ART">
+                  <input type="hidden" name="_ri_" value="X0Gzc2X%3DWQpglLjHJlYQGnp51yrMf2qXdC9tjU8pzgMtwfYzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DWQpglLjHJlYQGnyLSq2fzdkuzdzglHMsUhgeNzaSgkk">
+                </form>
+              </div>
+              <!--/.ftr-email-form-->
+              <div class="ftr-email-privacy-policy"></div>
+            </div>
+            <!--/.footer-email-->
+            <div class="footer-social">
+              <h6 class="ftr-hdr">Follow Us</h6>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/art.com" title="Facebook" onclick="_gaq.push(['_trackSocial', 'Facebook', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="24" height="24" alt="Like us on Facebook" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/fb.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://plus.google.com/108089796661280870153" title="Google+" onclick="_gaq.push(['_trackSocial', 'GooglePlus', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="24" height="24" alt="Follow us on Google+" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/gplus.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://pinterest.com/artdotcom/" target="_blank">
+                    <img width="24" height="24" alt="Follow us on Pinterest" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/pin-badge.png">
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="http://instagram.com/artdotcom/">
+                    <img width="24" height="24" alt="Follow us on Instagram" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/instagram-badge.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twitter.com/artdotcom" title="Twitter" onclick="_gaq.push(['_trackSocial', 'Twitter', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="67" alt="Follow us on Twitter" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/twitter.png">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--/.footer-social-->
+            <div class="footer-legal">
+              <p>&copy; Art.com Inc. All Rights Reserved. | <a href="/help/privacy-policy.html" rel="nofollow">Privacy Policy</a> | <a href="/help/terms-of-use.html" rel="nofollow">Terms of Use</a> | <a href="/help/terms-of-sale.html" rel="nofollow">Terms of Sale</a></p>
+              <p>Art.com, You+Art, and Photos [to] Art are trademarks or registered trademarks of Art.com Inc.</p>
+              <p>Various aspects of this website are covered by issued US patent No. 7,973,796 and other pending patent applications.</p>
+            </div>
+            <!--/.footer-legal-->
+            <div class="footer-payment">
+              <ul>
+                <li class="ftr-stella">
+                  <span title="Stella Service" onclick="openLink('http://www.stellaservice.com/profile/Art.com/')"></span>
+                </li>
+                <li>
+                  <span onclick="clickTrack(); return false;" onmouseover="this.style.cursor='pointer'"><img border="0" alt="HACKER SAFE certified sites prevent over 99.9% of hacker crime." src="https://images.scanalert.com/meter/www.art.com/31.gif"></span>
+                </li>
+                <li class="ftr-bbb">
+                  <span title="BBB" onclick="openLink('http://www.bbb.org/raleigh-durham/business-reviews/art-suppliers/artcom-inc-in-raleigh-nc-5001914')"></span>
+                </li>
+              </ul>
+            </div>
+            <!--/.footer-payment-->
+          </div>
+          <!--/.footer-custom-->
+        </div>
+        <!--/.footer-gray-->
+      </footer>
+  </section>
+</body>
+</html>

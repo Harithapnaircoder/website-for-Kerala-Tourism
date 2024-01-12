@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  h1{
+    margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important; 
+  margin-top: 30px;
+  font-size: 50px;
+  text-align: center;
+  background-color: bisque;
+  }
+    h2 {
+  margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important; 
+  margin-top: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-color: bisque;
+}
+h3{
+    margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important; 
+  margin-top: 30px;
+  font-size: 30px;
+  text-align: center;
+  background-color: bisque;  
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+h5{
+    margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important; 
+  margin-top: 30px;
+  font-size: 30px;
+  background-color:whitesmoke;  
+}
+.card-container {
+    display: flex;
+    gap: 2px; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    padding: 2px;
+    margin: 2px;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 2px;
+}
+
+
+        body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer-gray {
+  background-color: #EFEFEF;
+  width: 100%;
+}
+
+.footer-custom {
+  color: #888;
+  font: normal normal 12px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  max-width: 1008px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-hdr {
+  color: #000;
+  font: 22px/1.4 'BebasNeueRegular', BebasNeue, 'Bebas Neue', Arial, sans-serif;
+  margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+}
+
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+
+.footer-custom .footer-legal a {
+  display: inline;
+}
+
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+
+#ftrEmailForm {
+  height: 44px;
+}
+
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 BebasFamily, BebasNeueRegular, "Bebas Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFF;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -o-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: linear-gradient(to bottom, white 0, #e1e1e1 100%);
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+
+.footer-payment {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+.ftr-bbb span,
+.ftr-stella span {
+  background-image: url("http://cache1.artprintimages.com/images/jump_pages/rebrand2/images/subnav2.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.ftr-bbb span {
+  background-position: -339px -8px;
+  width: 96px;
+}
+
+.ftr-stella span {
+  background-position: -339px -107px;
+  width: 57px;
+}
+p{
+  text-align: justify;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 19px;
+}
+ol{
+  font-size: 19px;
+}
+h4{
+  font-size: 19px; 
+}
+.image-container {
+      text-align: center;
+    }
+    img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+<body>
+    <h1>WAYANAD</h1> 
+    <div class="image-container">
+      <img src="image/100.jpg" alt="" width="700" height="300">
+    </div>
+    <p>Wayanad, a rural paradise nestled in the heart of Kerala, is a treasure trove waiting to be discovered. Spanning approximately 2000 square kilometres of lush landscapes, Wayanad shares its borders with Karnataka and Tamil Nadu, offering a unique blend of culture and natural beauty.</p>
+
+  <p>When it comes to Wayanad tourist attractions, the options are abundant. Trek to the summit of Chembra Mountain, Wayanad's highest peak, or marvel at the engineering marvel that is the Banasura Sagar Dam, India's largest earthen dam. For a serene experience, indulge in boating on the tranquil waters of Pookode Lake. Explore the Edakkal Cave, the only spot in India adorned with Stone Age engravings, or immerse yourself in the rich biodiversity of the Muthanga Wildlife Sanctuary for an unforgettable experience.</p>
+
+  <p>Wayanad is truly unlike any other destination in Kerala, offering a historical journey from Neolithic humans to the troopers of Tippu Sultan. From the ancient Edakkal Caves to millennia-old Jain temples, Wayanad caters to the history buff in you.</p>
+
+  <p>Whether you prefer flamboyant abodes or budget-friendly backpacker hostels, Wayanad promises a special experience for every traveler. Take a thrilling jeep safari through the Muthanga forest, explore off-beat wonders, or try your hand at bamboo rafting in Kuruva Island.</p>
+
+  <p>Come, discover the allure of this lovely hill station, where every corner tells a story, and every experience is a memory in the making.</p>
+  <h4>Places To Visit in Wayanad</h4>
+
+  <ol>
+    <li>Banasura Sagar Dam:</li>
+    <li>Soochipara Falls:</li>
+    <li>Arippara Waterfalls:</li>
+    <li>Iruppu Falls:</li>
+    <li>Kuruva Island:</li>
+    <li>Tholpetty Wildlife Sanctuary:</li>
+    <li>Pookode Lake:</li>
+    <li>Neelimala View Point:</li>
+    <li>Pakshipathalam Bird Sanctuary:</li>
+    <li>Karapuzha Dam:</li>
+    <li>Puliyarmala Jain Temple:</li>
+    <li>Kalpetta:</li>
+    <li>Karlad Lake:</li>
+    <li>E3 Theme Park:</li>
+    <li>The Bamboo Factory:</li>
+</ol>
+<h4>Things To Do In Wayanad</h4>
+<ol>
+  <li>Spend a day Camping</li>
+  <li>Visit Edakkal Cave</li>
+  <li>Rest at Vythiri Village Resort</li>
+  <li>Pay a visit to Tea Estate</li>
+  <li>Adventure at Wayanad Wildlife Sanctuary</li>
+  <li>Witness the iconic Jain Temple</li>
+  <li>Spiritual awakening at Thirunelli Temple</li>
+  <li>Visit Meenmutty Waterfalls</li>
+  <li>Witness the beautiful sights from Lakkidi View Point</li>
+</ol>
+<h2>BEST TIME TO VISIT WAYANAD</h2>
+
+<p><strong>1. Winters in Wayanad:</strong> Winter in Wayanad remains between December to February, this is a fantastic time to visit the place. With the lowest temperature reaching up to 10°C, tourists love visiting this place in winter. Many travellers like the cool, pleasant atmosphere, making this the best time to visit Wayanad. The season is great for sightseeing, friendly lodging, and outdoor excursions. Apart from that, you can go sightseeing, trek to Chembra Peak, view the wildlife, or visit Wayanad's iconic heart-shaped lake at the summit of the hills. If you are planning a Wayanad trip in winter, ensure that you have booked your holiday package well before time.</p>
+
+<p><strong>2. Summers in Wayanad:</strong> Summers (March to May) are hot but beautiful. A nice breeze from the nearby forest zone makes it the best time to visit Wayanad. The highest temperature recorded is 36 degrees Celsius. During this season, avoid going out in the afternoon. Mornings and evenings are the best times to go sightseeing. Because the temperatures are lower, quieter, and more comfortable than in other regions, afternoons can be spent exploring the evergreen forests surrounding the hill station. The Wayanad Wildlife Sanctuary, as well as the Coffee, Tea, Rubber, and Pepper Plantations, are some of the must-see sites during the summer season. While staying in Wayanad in the summer, you can participate in or witness the celebrations of summer festivals. Mahashivratri is devoted to Lord Shiva in March, while Thirunelli is celebrated in April. The domain receives heavy rain from an exuberant deluge in May. The weather is quite hot during the day. You can visit Wayanad during the summers for an off-beat, budget-friendly, and tranquil vacation.</p>
+
+<p><strong>3. Monsoon in Wayanad:</strong> The monsoon season begins in June and lasts until September, occasionally until mid-October. Wayanad receives approximately 3000 mm of rain annually, and the weather remains humid, with temperatures ranging from 17°C to 29°C. The hill station, in particular, appears greener and fresher during the season. Still, it is not always advised to visit Wayanad in the monsoon due to the significant rainfall it receives. On the other hand, adventurers and nature enthusiasts can visit for treks, hikes, and nature walks through the region's extensive natural vegetation. Thus, it is not exactly the best time to visit Wayanad, but those who enjoy rain can pay a visit. Some notable festivals observed during the season are Lord Krishna's birthday, Ashtami Rohini, celebrated in August/September.</p>
+
+  
+  <h2>MAIN TOURIST ATTRACTIONS</h2>
+    
+    <h5>1.EDAKKAL CAVES</h5>
+  <p>The Edakkal Caves are a fascinating archaeological site with ancient rock engravings and carvings. Situated on Ambukuthi Hills, the caves offer a unique trekking experience through scenic landscapes. The petroglyphs on the cave walls provide a glimpse into the region's prehistoric era, making it a must-visit for history and nature enthusiasts.</p>
+  <p><strong>Entry time: Tuesday to Sunday - 9:00 am – 4:00 pm</strong>
+  
+      <div class="card-container" style="display: flex;">
+        <div class="card" style="width: 18rem;">
+            <img src="image/edk1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="image/edk2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+          </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+          <img src="image/ed4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+          </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="image/ed3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+  
+  
+  <h5>2.BANASURA SAGAR DAM</h5>
+  <p>The Banasura Sagar Dam, nestled in the Western Ghats, is surrounded by lush greenery and rolling hills. Boating on the reservoir provides a serene experience with breathtaking views of the Banasura Hills. The dam, built on the Kabini River, is not only a marvel of engineering but also a picturesque spot for nature lovers.</p>
+  <p><strong>Entry time: Monday to Sunday - 9:00 am – 5:00 pm</strong></p>
+  <!-- row1-->
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/ban1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ban2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ban3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ban4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+  <h5>3.SOOCHIPARA FALLS</h5>
+  <p>Soochipara Falls, also known as Sentinel Rock Waterfalls, is a three-tiered cascade surrounded by dense forests. A trek through the verdant landscapes leads to the base of the falls, offering an opportunity to enjoy the cool waters and the natural beauty that Wayanad is renowned for. The journey to the falls is an adventure in itself.</p>
+  <p><strong>Entry time: Monday to Sunday - 9:00 am – 5:00 pm</strong></p>
+  <!-- row3 -->
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/soo1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/soo2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/soo3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/soo4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+  <h5>4.WAYANAD WILDLIFE SANCTUARY</h5>
+  <p>This sanctuary is a haven for wildlife enthusiasts, housing a variety of flora and fauna. Visitors can embark on a thrilling safari to spot elephants, tigers, leopards, and numerous bird species. The sanctuary's diverse ecosystems, including moist deciduous forests and grasslands, make it a must-visit for nature and wildlife lovers.</p>
+  <p><strong>Entry time: Monday to Sunday - 7:00 am – 10:00 am, 3:00 pm – 4:30 pm</strong></p>
+  <!-- row4 -->
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/wil1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/wil2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/wil3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/wil4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+  <h5>5.CHEMBRA PEAK</h5>
+  <p> Chembra Peak is the highest point in Wayanad, offering a challenging trek that rewards hikers with panoramic views of the surrounding hills and the heart-shaped Chembra Lake. The trek takes adventurers through lush greenery, making it a paradise for trekking enthusiasts and nature photographers.</p>
+  <p>Entry time-Monday to Sunday: 7:00 am – 5:00 pm</p>
+  <p><strong>Trekking Time: 7:00 am – 2:00 pm</strong></p>
+  <!-- row5-->
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/ch5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ch6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ch8.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ch7.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div> 
+</div>
+  
+<h5>6.POOKODE LAKE</h5>
+  <p>Nestled between hills and forests, Pookode Lake is a scenic freshwater lake surrounded by lush greenery. Boating on the lake is a tranquil experience, allowing visitors to soak in the natural beauty of the surroundings. The lake is also home to a variety of freshwater fish and is a popular spot for picnics and leisurely walks.</p>
+<p><strong>Pookode Lake opening time is 9 AM, and it closes by 5 PM. Boating timings are also from 9 AM to 5 PM, but entry closes by 4.30 PM. So, reach early if you want to enjoy boating at Pookode Lake.</strong></p>
+  <!-- row6 -->
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/pok1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/pok2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/pok3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/pok4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div> 
+</div>
+<p>Discover the enchanting allure of Wayanad, a destination that seamlessly blends natural beauty with cultural richness. From the mist-covered hills to the vibrant local traditions, Wayanad is a tapestry of experiences waiting to be explored. Whether you are an adventure enthusiast, a nature lover, or someone seeking tranquility, Wayanad has something special for everyone. Immerse yourself in the lush landscapes, indulge in local delicacies, and create lasting memories in this haven of serenity. Start your journey with us and let Wayanad unfold its myriad treasures for an unforgettable travel experience.</p>
+  <section>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62509.360434486676!2d76.0134839520389!3d11.706094406554133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba60aca72a6f31d%3A0x80f9947968021a09!2sWayanad%2C%20Kerala!5e0!3m2!1sen!2sin!4v1704814746511!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+  <section>
+    <footer>
+        <div class="footer-gray">
+          <div class="footer-custom">
+            <div class="footer-lists">
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">For More Info</h6>
+                <ul class="ftr-links-sub">
+                  <li>89653490</li>
+                </ul>
+                <h6 class="ftr-hdr">KERALA</h6>
+                <ul class="ftr-links-sub">
+                  <li><a href="http://www.art.fr" rel="nofollow">keralatourism</a></li>
+                  <li><a href="https://www.art.co.uk" rel="nofollow">Nature Love</a></li>
+                </ul>
+              </div>
+              <!--/.footer-list-wrap-->
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">Travel Hub</h6>
+                <ul class="ftr-links-sub">
+                  <li><a href="/help/talktous.html" rel="nofollow">kerala at a Glance</a></li>
+                  <li><a href="/help/placingorders.html" rel="nofollow">Accomodation</a></li>
+                  <li><a href="/help/shipping.html" rel="nofollow">tips &amp; places</a></li>
+                  <li><a href="/help/shippingreturns.html" rel="nofollow">Best places</a></li>
+                  <li><a href="/help/international-shipping.html" rel="nofollow">videos</a></li>
+                  <li><a href="/~/egift-cards/" rel="nofollow">photo</a></li>
+                  <li><a href="/help/faq.html" rel="nofollow">festivals</a></li>
+                </ul>
+              </div>
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">Nature</h6>
+                <ul class="ftr-links-sub">
+                  <li><a href="/asp/aboutus/default-asp/_/posters.htm" rel="nofollow">Hill</a></li>
+                  <li><a href="http://corporate.art.com/careers" rel="nofollow">Back waters</a></li>
+                  <li><a href="/asp/landing/artistrising" rel="nofollow">Artist Rising</a></li>
+                  <li><a href="/~/art-for-business" rel="nofollow">Beaches</a></li>
+                  <li><a href="http://affiliates.art.com/index.aspx" rel="nofollow">Events</a></li>
+                  <li><a href="/catalog" rel="nofollow"><strong>wildlife</strong></a></li>
+                  <li><a href="http://blog.art.com" rel="nofollow">waterfalls/a></li>
+                </ul>
+              </div>
+              <!--/.footer-list-wrap-->
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">specialities</h6>
+                <ul class="ftr-links-sub">
+                  <art:content rule="!loggedin">
+                    <li class="ftr-Login"><span class="link login-trigger">Ayurveda</span></li>
+                    <li><span class="link" onclick="link('/asp/secure/your_account/track_orders-asp/_/posters.htm')">Track My Order</span></li>
+                  </art:content>
+                  <art:content rule="loggedin">
+                    <li class="ftr-Login"><span class="link ftr-access-my-account">Mansoon</span></li>
+                    <li><span class="link" onclick="window.location.href = getProfileKey() + '?pagetype=oh';">houseboats</span></li>
+                  </art:content>
+                </ul>
+              </div>
+              <!--/.footer-list-wrap-->
+            </div>
+            <!--/.footer-lists-->
+            <div class="footer-email">
+              <h6 class="ftr-hdr">Subscribe our news letter</h6>
+              <div id="ftr-email" class="ftr-email-form">
+                <form id="ftrEmailForm" method="post" action="http://em.art.com/pub/rf">
+                  <div class="error">Please enter a valid email address</div>
+                  <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address" />
+                  <!--
+                      -->
+                  <input type="submit" class="button" value="SUBMIT" />
+                  <input type="hidden" name="country_iso2" value="">
+                  <input type="hidden" name="language_iso2" value="en">
+                  <input type="hidden" name="site_domain" value="art.com">
+                  <input type="hidden" name="email_acq_source" value="01-000001">
+                  <input type="hidden" name="email_acq_date" value="" id="ftr-email-date">
+                  <input type="hidden" name="brand_id" value="ART">
+                  <input type="hidden" name="_ri_" value="X0Gzc2X%3DWQpglLjHJlYQGnp51yrMf2qXdC9tjU8pzgMtwfYzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DWQpglLjHJlYQGnyLSq2fzdkuzdzglHMsUhgeNzaSgkk">
+                </form>
+              </div>
+              <!--/.ftr-email-form-->
+              <div class="ftr-email-privacy-policy"></div>
+            </div>
+            <!--/.footer-email-->
+            <div class="footer-social">
+              <h6 class="ftr-hdr">Follow Us</h6>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/art.com" title="Facebook" onclick="_gaq.push(['_trackSocial', 'Facebook', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="24" height="24" alt="Like us on Facebook" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/fb.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://plus.google.com/108089796661280870153" title="Google+" onclick="_gaq.push(['_trackSocial', 'GooglePlus', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="24" height="24" alt="Follow us on Google+" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/gplus.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://pinterest.com/artdotcom/" target="_blank">
+                    <img width="24" height="24" alt="Follow us on Pinterest" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/pin-badge.png">
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="http://instagram.com/artdotcom/">
+                    <img width="24" height="24" alt="Follow us on Instagram" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/instagram-badge.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twitter.com/artdotcom" title="Twitter" onclick="_gaq.push(['_trackSocial', 'Twitter', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="67" alt="Follow us on Twitter" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/twitter.png">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--/.footer-social-->
+            <div class="footer-legal">
+              <p>&copy; Art.com Inc. All Rights Reserved. | <a href="/help/privacy-policy.html" rel="nofollow">Privacy Policy</a> | <a href="/help/terms-of-use.html" rel="nofollow">Terms of Use</a> | <a href="/help/terms-of-sale.html" rel="nofollow">Terms of Sale</a></p>
+              <p>Art.com, You+Art, and Photos [to] Art are trademarks or registered trademarks of Art.com Inc.</p>
+              <p>Various aspects of this website are covered by issued US patent No. 7,973,796 and other pending patent applications.</p>
+            </div>
+            <!--/.footer-legal-->
+            <div class="footer-payment">
+              <ul>
+                <li class="ftr-stella">
+                  <span title="Stella Service" onclick="openLink('http://www.stellaservice.com/profile/Art.com/')"></span>
+                </li>
+                <li>
+                  <span onclick="clickTrack(); return false;" onmouseover="this.style.cursor='pointer'"><img border="0" alt="HACKER SAFE certified sites prevent over 99.9% of hacker crime." src="https://images.scanalert.com/meter/www.art.com/31.gif"></span>
+                </li>
+                <li class="ftr-bbb">
+                  <span title="BBB" onclick="openLink('http://www.bbb.org/raleigh-durham/business-reviews/art-suppliers/artcom-inc-in-raleigh-nc-5001914')"></span>
+                </li>
+              </ul>
+            </div>
+            <!--/.footer-payment-->
+          </div>
+          <!--/.footer-custom-->
+        </div>
+        <!--/.footer-gray-->
+      </footer>
+  </section>
+</body>
+</html>

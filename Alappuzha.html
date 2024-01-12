@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   h1{
+    margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important; 
+  margin-top: 30px;
+  font-size: 50px;
+  text-align: center;
+  background-color: bisque;
+  }
+    h2 {
+  margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important; 
+  margin-top: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-color: bisque;
+}
+h3{
+    margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important; 
+  margin-top: 30px;
+  font-size: 30px;
+  text-align: center;
+  background-color: bisque;  
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+text-align: justify;
+}
+h5{
+    margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  color: green !important; 
+  margin-top: 30px;
+  font-size: 30px;
+  background-color:whitesmoke;  
+}
+.card-container {
+    display: flex;
+    gap: 2px; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card {
+    width: calc(33.33% - 20px);
+    padding: 2px;
+    margin: 2px;
+    border-radius: 8px;
+}
+.card img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 2px;
+}
+/* footer css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer-gray {
+  background-color: #EFEFEF;
+  width: 100%;
+}
+.footer-custom {
+  color: #888;
+  font: normal normal 12px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  max-width: 1008px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+}
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ftr-hdr {
+  color: #000;
+  font: 22px/1.4 'BebasNeueRegular', BebasNeue, 'Bebas Neue', Arial, sans-serif;
+  margin: 1em 0 0;
+}
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+}
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+.footer-custom .footer-legal a {
+  display: inline;
+}
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+#ftrEmailForm {
+  height: 44px;
+}
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 BebasFamily, BebasNeueRegular, "Bebas Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFF;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -o-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: linear-gradient(to bottom, white 0, #e1e1e1 100%);
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+.footer-payment {
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+.ftr-bbb span,
+.ftr-stella span {
+  background-image: url("http://cache1.artprintimages.com/images/jump_pages/rebrand2/images/subnav2.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+}
+.ftr-bbb span {
+  background-position: -339px -8px;
+  width: 96px;
+}
+.ftr-stella span {
+  background-position: -339px -107px;
+  width: 57px;
+}
+p{
+  text-align: justify;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 19px;
+}
+ol{
+  font-size: 19px;
+}
+h4{
+  font-size: 19px; 
+}
+.image-container {
+      text-align: center;
+    }
+    img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+<body>
+    <h1>ALAPPUZHA</h1> 
+    <div class="image-container">
+      <img src="image/105.jpg" alt="" width="600" height="400">
+    </div>
+    <p>Nestled along the enchanting southwestern coast of India, Alappuzha, affectionately known as Alleppey, beckons travelers with its unparalleled blend of natural splendor and cultural richness. Aptly dubbed the "Venice of the East," this captivating destination is a labyrinth of serene backwaters, where emerald-green canals weave through lush landscapes, creating an idyllic setting reminiscent of a dream. The heart of Alappuzha beats with the rhythmic oars of traditional houseboats, or "kettuvallams," gracefully navigating the waterways, offering a unique and tranquil voyage. Visitors are invited to immerse themselves in the magic of the Nehru Trophy Boat Race, a vibrant spectacle where beautifully adorned snake boats race across Punnamada Lake, encapsulating the spirit of Kerala's rich maritime heritage.</p>
+    
+    <p>Beyond the waterways, Alappuzha unfolds its treasures on land with the golden expanse of Alappuzha Beach, where the gentle waves of the Arabian Sea kiss the shores, and the historic Alappuzha Lighthouse stands sentinel over panoramic coastal views. The grandeur of the Ambalappuzha Sree Krishna Temple, with its unique deity and cultural festivities, invites both spiritual seekers and admirers of architectural marvels. Nature enthusiasts can explore the sprawling Vembanad Lake, India's longest lake, and its shores, home to the Kumarakom Bird Sanctuary, a haven for avian wonders.</p>
+
+    <p>In Alappuzha, every corner reveals a story, and every experience is a journey into the soul of Kerala. The pristine Marari Beach offers a tranquil escape, while the Punnappra-Vayalar Uprising Memorial narrates tales of historical significance. Whether navigating the intricate canals, savoring the sweet serenity of Marari, or exploring the vibrant tapestry of cultural landmarks, Alappuzha promises an immersive and unforgettable experience for those seeking a harmonious blend of nature, tradition, and the warmth of South Indian hospitality. Discover the allure of Alappuzha, where every moment is a brushstroke on the canvas of a timeless voyage.</p>
+    <h4>Places To Visit in  Alappuzha</h4>
+    <ol>
+      <li>Alappuzha Beach</li>
+      <li>Marari Beach</li>
+      <li>Punnapra Beach</li>
+      <li>Vembanad Lake</li>
+      <li>Pathiramanal</li>
+      <li>Ambalappuzha Sree Krishna Temple</li>
+      <li>Mullakkal Rajeshwari Temple</li>
+      <li>St. Mary’s Forane Church</li>
+      <li>Karumadi</li>
+      <li>Alleppey Lighthouse</li>
+      <li>Pandavan Rock</li>
+      <li>Revi Karunakaran Museum</li>
+    </ol>
+    <h4>Things To Do In  Alappuzha</h4>
+    <ol>
+      <li>Have Fun Time at Backwaters</li>
+      <li>Explore the Royal Krishnapuram Palace</li>
+      <li>Rejuvenate Your Body With Ayurveda & Spa</li>
+      <li>Enjoy Your Stay in Kuttanad</li>
+      <li>Delve into Spirituality and Religion</li>
+      <li>Attend the Popular Snake Boat Festival</li>
+      <li>Witness the Beautiful Sunset View at Pozhiyoram</li>
+      <li>Book A Luxurious Homestay</li>
+      <li>Enjoy Shopping at the Floating Triveni</li>
+      <li>Treat Yourself With the Wonderful Food</li>
+      <li>Pay A Visit to the Coir Museum</li>
+      <li>Learn the Special Art of Kalaripayattu</li>
+      <li>Spend Some Time at the Elephant Training Camp</li>
+      <li>Explore the Local Cuisines</li>
+    </ol>
+    
+    <h2>BEST TIME TO VISIT ALAPPUZHA</h2>
+    <p><strong>1. Summer Season in Alappuzha</strong>The summer season in Alappuzha typically extends from March to May. During these months, the weather is characterized by high temperatures and humidity, which may pose some discomfort for travelers engaged in outdoor activities. April, in particular, tends to be humid, making it less favorable for sightseeing. However, the evenings in Alappuzha offer a refreshing breeze, providing relief from the daytime heat. Despite this, the summer season is generally not considered the best time to visit Alappuzha.</p>
+    <p><strong>2. Monsoon Season in Alappuzha</strong>The monsoon season in Alappuzha lasts from June to September and can be a good time to visit. The rainfall during this period revitalizes the landscape, painting Alappuzha in lush shades of green. The sight of raindrops falling on the tranquil waters of the canals is a captivating experience. It's advisable to plan your visit to Alappuzha during the later part of the monsoon season, avoiding the peak rainfall months from June through August.</p>
+    <p><strong>3. Winter Season in Alappuzha</strong>The winter season in Alappuzha spans from November to February, marking the peak tourist season for the city. Winter offers ideal weather conditions, making it the perfect time to explore Alappuzha. Whether you're interested in a houseboat stay, canoeing, fishing, or sightseeing, winter provides the most comfortable environment for these activities.</p>
+    <h2>MAIN TOURIST ATTRACTIONS</h2>
+    <h5>1.BACKWATERS AND HOUSEBOATS</h5>
+  <p>Alappuzha is famous for its mesmerizing backwaters, comprising a network of canals, lakes, and lagoons. The best way to explore this aquatic paradise is aboard a traditional houseboat, known as a "kettuvallam." Visitors can enjoy a tranquil journey through the serene waters, surrounded by lush greenery and quaint villages.</p>
+  <p><strong>Entry time:Monday to Sunday-12:00 pm – 9:00 am (Night Stays),11:00 am – 5:00 pm (Day Tour)</strong> Tuesday to Sunday</p>
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/bac.1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/bac.2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/bac.3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/bc.5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>   
+  <h5>2.NEHRU TROPHY BOAT RACE</h5>
+  <p>The Nehru Trophy Boat Race is a major highlight in Alappuzha, held annually on the Punnamada Lake. Spectacular snake boat races featuring traditional longboats draw crowds from around the world. The event is a vibrant celebration of Kerala's rich cultural and sporting heritage.</p>
+  <p><strong>Entry time:August 2024 11 am </strong>
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/bot1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/bot5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/bot3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/bot6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+  <h5>3.ALAPPUZHA BEACH</h5>
+  <p>The Alappuzha Beach is a picturesque stretch of golden sand lining the Arabian Sea. Visitors can enjoy leisurely strolls along the shore, witness stunning sunsets, and indulge in various water activities. The historic Alappuzha Lighthouse nearby provides panoramic views of the coastline.</p>
+  <p><strong>Entry time: Monday to Sunday - 5:00 am – 7:00 pm</strong></p>
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/be1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/be2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/be4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/be6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+  <h5>4.VEMBANAD LAKE</h5>
+  <p>Vembanad Lake, the longest lake in India, adds to the scenic beauty of Alappuzha. It's a hub for birdwatching and offers opportunities for boating. The Kumarakom Bird Sanctuary, situated on the lake's shores, is a haven for bird enthusiasts.</p>
+  <p><strong>Entry time: Monday to Sunday - 10:00 am – 6:00 pm</strong></p>
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/ve1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ve2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ve4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/ve5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+  <h5>5.MARARI BEACH</h5>
+  <p>For a quieter beach experience, Marari Beach is located a short distance from Alappuzha. This pristine beach offers a tranquil escape with its clean shores, swaying palms, and a laid-back atmosphere.</p>
+  <p><strong>Entry time:open 24 hours a day</strong></p>
+<div class="card-container" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="image/mb1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/mb2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/mb3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="image/mb4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+    </div>
+</div>
+<p>
+  Immerse yourself in the enchanting beauty and diverse experiences that Alappuzha has to offer. Whether you choose to cruise along the serene backwaters, explore historical sites, or rejuvenate your senses in the lap of nature, Alappuzha promises a memorable journey. From the vibrant festivities of the Snake Boat Festival to the tranquility of the monsoon rains painting the landscape, every season brings its unique charm. Plan your visit wisely, considering the nuances of each season, and discover why Alappuzha is rightly called the "Venice of the East." Indulge in the warm hospitality, savor local cuisines, and create lasting memories in this picturesque gem of Kerala.
+</p>
+  <section>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125922.77155673681!2d76.25970254753695!3d9.501196371552554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0884f1aa296b61%3A0xb84764552c41f85a!2sAlappuzha%2C%20Kerala!5e0!3m2!1sen!2sin!4v1704814885361!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+  <br>
+  <section>
+    <footer>
+        <div class="footer-gray">
+          <div class="footer-custom">
+            <div class="footer-lists">
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">For More Info</h6>
+                <ul class="ftr-links-sub">
+                  <li>89653490</li>
+                </ul>
+                <h6 class="ftr-hdr">KERALA</h6>
+                <ul class="ftr-links-sub">
+                  <li><a href="http://www.art.fr" rel="nofollow">keralatourism</a></li>
+                  <li><a href="https://www.art.co.uk" rel="nofollow">Nature Love</a></li>
+                </ul>
+              </div>
+              <!--/.footer-list-wrap-->
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">Travel Hub</h6>
+                <ul class="ftr-links-sub">
+                  <li><a href="/help/talktous.html" rel="nofollow">kerala at a Glance</a></li>
+                  <li><a href="/help/placingorders.html" rel="nofollow">Accomodation</a></li>
+                  <li><a href="/help/shipping.html" rel="nofollow">tips &amp; places</a></li>
+                  <li><a href="/help/shippingreturns.html" rel="nofollow">Best places</a></li>
+                  <li><a href="/help/international-shipping.html" rel="nofollow">videos</a></li>
+                  <li><a href="/~/egift-cards/" rel="nofollow">photo</a></li>
+                  <li><a href="/help/faq.html" rel="nofollow">festivals</a></li>
+                </ul>
+              </div>
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">Nature</h6>
+                <ul class="ftr-links-sub">
+                  <li><a href="/asp/aboutus/default-asp/_/posters.htm" rel="nofollow">Hill</a></li>
+                  <li><a href="http://corporate.art.com/careers" rel="nofollow">Back waters</a></li>
+                  <li><a href="/asp/landing/artistrising" rel="nofollow">Artist Rising</a></li>
+                  <li><a href="/~/art-for-business" rel="nofollow">Beaches</a></li>
+                  <li><a href="http://affiliates.art.com/index.aspx" rel="nofollow">Events</a></li>
+                  <li><a href="/catalog" rel="nofollow"><strong>wildlife</strong></a></li>
+                  <li><a href="http://blog.art.com" rel="nofollow">waterfalls/a></li>
+                </ul>
+              </div>
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">specialities</h6>
+                <ul class="ftr-links-sub">
+                  <art:content rule="!loggedin">
+                    <li class="ftr-Login"><span class="link login-trigger">Ayurveda</span></li>
+                    <li><span class="link" onclick="link('/asp/secure/your_account/track_orders-asp/_/posters.htm')">Track My Order</span></li>
+                  </art:content>
+                  <art:content rule="loggedin">
+                    <li class="ftr-Login"><span class="link ftr-access-my-account">Mansoon</span></li>
+                    <li><span class="link" onclick="window.location.href = getProfileKey() + '?pagetype=oh';">houseboats</span></li>
+                  </art:content>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-email">
+              <h6 class="ftr-hdr">Subscribe our news letter</h6>
+              <div id="ftr-email" class="ftr-email-form">
+                <form id="ftrEmailForm" method="post" action="http://em.art.com/pub/rf">
+                  <div class="error">Please enter a valid email address</div>
+                  <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address" />
+                  <input type="submit" class="button" value="SUBMIT" />
+                  <input type="hidden" name="country_iso2" value="">
+                  <input type="hidden" name="language_iso2" value="en">
+                  <input type="hidden" name="site_domain" value="art.com">
+                  <input type="hidden" name="email_acq_source" value="01-000001">
+                  <input type="hidden" name="email_acq_date" value="" id="ftr-email-date">
+                  <input type="hidden" name="brand_id" value="ART">
+                  <input type="hidden" name="_ri_" value="X0Gzc2X%3DWQpglLjHJlYQGnp51yrMf2qXdC9tjU8pzgMtwfYzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DWQpglLjHJlYQGnyLSq2fzdkuzdzglHMsUhgeNzaSgkk">
+                </form>
+              </div>
+              <!--/.ftr-email-form-->
+              <div class="ftr-email-privacy-policy"></div>
+            </div>
+            <!--/.footer-email-->
+            <div class="footer-social">
+              <h6 class="ftr-hdr">Follow Us</h6>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/art.com" title="Facebook" onclick="_gaq.push(['_trackSocial', 'Facebook', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="24" height="24" alt="Like us on Facebook" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/fb.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://plus.google.com/108089796661280870153" title="Google+" onclick="_gaq.push(['_trackSocial', 'GooglePlus', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="24" height="24" alt="Follow us on Google+" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/gplus.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://pinterest.com/artdotcom/" target="_blank">
+                    <img width="24" height="24" alt="Follow us on Pinterest" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/pin-badge.png">
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="http://instagram.com/artdotcom/">
+                    <img width="24" height="24" alt="Follow us on Instagram" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/instagram-badge.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twitter.com/artdotcom" title="Twitter" onclick="_gaq.push(['_trackSocial', 'Twitter', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="67" alt="Follow us on Twitter" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/twitter.png">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--/.footer-social-->
+            <div class="footer-legal">
+              <p>&copy; Art.com Inc. All Rights Reserved. | <a href="/help/privacy-policy.html" rel="nofollow">Privacy Policy</a> | <a href="/help/terms-of-use.html" rel="nofollow">Terms of Use</a> | <a href="/help/terms-of-sale.html" rel="nofollow">Terms of Sale</a></p>
+              <p>Art.com, You+Art, and Photos [to] Art are trademarks or registered trademarks of Art.com Inc.</p>
+              <p>Various aspects of this website are covered by issued US patent No. 7,973,796 and other pending patent applications.</p>
+            </div>
+            <!--/.footer-legal-->
+            <div class="footer-payment">
+              <ul>
+                <li class="ftr-stella">
+                  <span title="Stella Service" onclick="openLink('http://www.stellaservice.com/profile/Art.com/')"></span>
+                </li>
+                <li>
+                  <span onclick="clickTrack(); return false;" onmouseover="this.style.cursor='pointer'"><img border="0" alt="HACKER SAFE certified sites prevent over 99.9% of hacker crime." src="https://images.scanalert.com/meter/www.art.com/31.gif"></span>
+                </li>
+                <li class="ftr-bbb">
+                  <span title="BBB" onclick="openLink('http://www.bbb.org/raleigh-durham/business-reviews/art-suppliers/artcom-inc-in-raleigh-nc-5001914')"></span>
+                </li>
+              </ul>
+            </div>
+            <!--/.footer-payment-->
+          </div>
+          <!--/.footer-custom-->
+        </div>
+        <!--/.footer-gray-->
+      </footer>
+  </section>
+</body>
+</html>
